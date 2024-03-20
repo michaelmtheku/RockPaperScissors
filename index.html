@@ -2,45 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissors</title>
+    <title>Document</title>
 </head>
 <body>
-    <script>
-        
-        function cpuPlay(){
-            let rps = ["rock", "paper", "scissors"];
-            let random = rps[Math.floor(Math.random() * rps.length)];
-            return random
-        }
 
-        function game(playerSelection, cpuSelection){
-            if(playerSelection === cpuSelection){
-                return ("It's a draw");
-            }
-            else if(playerSelection === "rock" && cpuSelection === "paper"){
-                return("You lose!");
-            }
-            else if(playerSelection === "rock" && cpuSelection === "scissors"){
-                return("You win!");
-            }
-            else if(playerSelection === "paper" && cpuSelection === "rock"){
-                return("You win!");        
-            }
-            else if(playerSelection === "paper" && cpuSelection === "scissors"){
-                return("You lose!");
-            }
-            else if(playerSelection === "scissors" && cpuSelection === "rock"){
-                return("You lose!");
-            }
-            else if(playerSelection === "scissors" && cpuSelection === "paper"){
-                return("You win!");
-            }
-        }
-        
-        let cpuSelection = cpuPlay();
-        let playerSelection = prompt("Rock, Paper, or Scissors?");
-        console.log(game(cpuSelection, playerSelection));
-    </script>
+    <h1>Play the Rock-Paper-Scissors game</h1>
+    <h2>Choose one!</h2>
+    <div class="button-bar">
+       <button data-option="Rock">Rock</button>
+       <button data-option="Paper">Paper</button>
+       <button data-option="Scissors">Scissors</button>
+    </div>
+    <div id="result"></div>
+
+    <script src="rps_game.js"></script>
+    
 </body>
 </html>
